@@ -1,0 +1,173 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html, body {
+	width: 100%;
+	min-height: 100vh;
+}
+
+body {
+	font-size: 100%;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background: url("http://photo-1.ru/wp-content/uploads/2016/12/gory-sneg-zima-noch-mlechnyi-put.jpg") no-repeat;
+	background-size: cover;*/
+	position: relative;
+	background-color: #000; 
+	color: #fff;
+}
+
+body::after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	z-index: 0;
+	/*background-color: rgba(0,0,0,.8); */
+}
+
+.container {
+	max-width: 1200px;
+	padding: 50px 0; 
+	width: 100%;
+	position: relative;
+	z-index: 1;
+	text-align: center;
+}
+
+/*.color-div {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background-color: purple;
+	border: 10px solid green;
+	box-shadow: 
+				0 0 0 10px blue,
+				0 0 0 20px red,
+				0 0 0 30px yellow;
+	border-radius: 50%; 			
+}*/
+/*
+.borber-div {
+	position: relative;
+	border: 2px solid #ffffff;
+	border-top: none;
+	padding: 50px 0;
+	color: #ffffff;
+	border-radius: 10px;
+}
+
+.borber-div::before,
+.borber-div::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 35%;
+	border-top: 2px solid #fff;
+	border-right: 0;
+	border-left: 0;
+	border-bottom: 0;
+
+	border-radius: 10px; 
+}
+.borber-div::before {
+	left: 0;
+	border-top-right-radius: 0; 
+}
+.borber-div::after {
+	right: 0;
+	border-top-left-radius: 0; 
+}
+
+
+h1 {
+	position: absolute;
+	width: 100%;
+	top: -18px;
+	left: 0;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 0;
+}
+
+.inner-div {
+	max-width: 80%;
+	margin: auto;
+}
+
+.circle{
+	fill: none;
+}
+
+.big {
+	stroke: #0f0;
+}
+
+.middle {
+	stroke: #f00;
+}
+
+.small {
+	stroke: #00f;
+}
+
+@media only screen and (max-width: 700px) {
+	.big, 
+	.middle {
+	display: none;
+}
+}
+/*@media only screen and (max-width: 900px) {
+	.big, 
+	{
+	display: none;
+}
+}                  тут что то другое, не работает*/ */
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	display: inline-block;
+	position: relative;
+}
+
+li > * {
+	
+	top: 0;
+	left: 0;
+}
+
+
+
+label {
+	content: #fff;
+	font-size: 2em;
+	display: block;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	border: 2px solid transparent;
+}
+
+input[type="radio"] {
+	width: 0;
+	height: 0;
+	position: absolute;
+}
+
+input[type="radio"]:checked + label {
+	border-color: #fff;
+}

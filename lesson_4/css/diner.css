@@ -1,0 +1,59 @@
+
+li:hover {
+	background: #8e17ba; /*  фиолетовый  */
+}
+li:active{
+	background: #67a3fd; /*  голубой  */
+}
+label:checked{
+
+	background: #fdfb67; /*  желтый  */
+}
+
+.list {width: 500px;
+  margin: 20px auto;
+            box-sizing: border-box;}
+
+.oll {
+	
+}
+
+span {color: white;
+	font-size:16px; 
+}
+
+body{ margin: 5px;
+  font-family: sans-serif;
+  transition: all .1s ease-in;
+	background: #4f4e50;
+}
+.header {color: #fd6775;
+	background: gray;
+	text-align: center;
+	padding: 10px;
+}
+
+li {list-style: none; 
+color: white;
+font-size:26px; 
+}
+span:after {
+     content: ")"; 
+   }
+span:before {
+     content: "("; 
+   }
+li:nth-child(odd) {
+	background: #b37cc8;
+}
+
+li:nth-child(even) {
+	background: #c87cb3;
+}
+ul + p {color: #fd6775;
+background: gray;
+	text-align: center;
+	padding: 10px;
+}
+ 
+    

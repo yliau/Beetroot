@@ -1,0 +1,162 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html, 
+body {
+	width: 100%;
+	min-height: 100vh;
+}
+
+.big_container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.header_container {
+	clear: both;
+	background-color:   #51713a;
+	margin-bottom: 10px; 
+	padding: 20px;
+}
+
+
+
+.header_container::before,
+.header_container::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+
+.header_logo {	
+    float: left;
+    margin-right: 100px;
+    padding: 0px;
+    font-size: 0px;
+}
+
+.header_link {
+	display: block;
+}
+
+.menu {
+	float: left;
+    width: 40%; /* Ширина блока */
+	padding-top: 40px;
+	
+}
+
+.menu_item {
+	display: inline-block;
+	margin-right:  15px;
+	text-decoration: none; 
+}
+
+
+.menu_n {
+	text-decoration: none;
+	color: #333;
+	font-style: italic;
+	font-size:26px;
+	float: left;
+	width: 20%; 
+   	padding-top: 40px;
+}
+
+.logon {
+    float: right;
+    width: 20%; 
+	padding-top: 40px;
+}
+
+/*.search  {
+	max-width: 1200px;
+	margin: 0 auto;
+}*/
+
+/*.menu_list {
+	display: inline-block;
+}*/
+.menu_a {
+	font-size:20px;
+	display: block;
+}
+
+.menu_list .menu_item {
+	position: relative; 
+	display: inline-block;
+}
+
+
+
+.menu_item::after/*:not(:last-child)*/ {
+	content: "|";
+	position: absolute;
+	color: #000;
+	margin: 0 15px;
+	
+}
+
+.menu_div:last-child::after {
+	display: none;
+}
+
+
+.heading {
+float: right;
+ width: 65%;
+}
+		
+.cat_foto {
+	float: right;
+    width: 65%; 
+}
+
+.main_content {
+	padding: 40px;
+	min-height: 600px;
+}
+
+.layer1 {
+	float: right;
+    padding: 10px; /* Поля вокруг текста */
+    padding-right: 20px; /* Отступ справа */
+    width: 30%; /* Ширина блока */
+}
+.cat {
+	float: left;
+	margin: 10px;
+}
+
+footer {
+	background: #51713a;
+	height: 140px;	
+}
+.footer_logo {	
+    float: left;
+    width: 10%; /* Ширина блока */
+    padding: 15px;
+     
+}
+.menu_footer {
+	float: left;
+    width: 65%; /* Ширина блока */
+	padding-top: 40px; 
+	text-align: center;
+}
+.icons { 
+	float: left;
+	padding-top: 30px;
+    width: 20%; 
+}
+
+.Copyright {
+	width: 90%; 
+	float: left;
+	margin-top: -10px;	
+	text-align: center;
+}

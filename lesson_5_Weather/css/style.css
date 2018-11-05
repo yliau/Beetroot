@@ -1,0 +1,155 @@
+* {
+	box-sizing: border-box; 
+	transition: all .1s ease-in;
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	width: 100%;      
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	background: #3399cc;
+	color: #ffffff;
+	border: 20px solid;
+	border-color:  #2b81ac;
+	font-family: “Lucida Sans Unicode”, “Lucida Grande”, sans-serif;
+}
+
+header, footer {
+	padding: 20px 0;
+}
+
+.upper{
+	text-transform: uppercase;
+}
+
+.cities {
+	background: #ffffff;
+	text-align:  center;
+	padding: 2px;
+	font-size: 0;
+	border: 2px  white;
+}
+
+.container {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.cities li{
+	list-style: none;
+	display: inline-block;
+	height: 80px;
+	margin: 0px 0;
+	font-size: 20px;
+	padding: 2px;
+}
+
+.temp {
+	opacity: 0.6; 
+}
+
+.lisbon  {
+	width: 50%;
+	background: #3399cc;
+  	border: 2px solid white;
+}
+
+.paris {
+	width: 25%;
+	background: #33cccc;
+	border: 2px solid white;
+}
+
+
+.belgrade {
+	width: 25%;
+	background: #996699;
+	border: 2px solid white;
+}
+
+.moscow {
+	width: 25%;
+	background: #c24747;
+	border: 2px solid white;
+}
+.telaviv {
+	width: 25%;
+	background: #e2674a;
+	border: 2px solid white;
+}
+.cair {
+	width: 25%;
+	background: #ffcc66;
+	border: 2px solid white;
+}
+.newyork {
+	width: 25%;
+	background: #99cc99;
+	border: 2px solid white;
+}
+.newdelhi {
+	width: 25%;
+	background: #669999;
+	border: 2px solid white;
+}
+
+.sanfrancisco {
+	width: 50%;
+	background: #cc6699;
+	border: 2px solid white;
+}
+
+.tokyo {
+	width: 25%;
+	background: #339966;
+	border: 2px solid white;
+}
+
+.sudney {
+	width: 100%;
+	background: #666699;
+	border: 2px solid white;
+}
+
+span {
+	display: inline-block;
+ 	padding: 7px 0 0 0; 
+}
+
+ul:hover li {
+	opacity: 0.5; 
+}
+ul li:hover {
+	opacity: 1;
+}
+
+a {
+	display: block;
+	cursor: pointer;
+}	
+
+
+
+/* 
+2b81ac рамка
+3399cc фон и 1 Lisbon
+33cccc Paris
+996699            Belgrade
+ c24747  Moscow
+ e2674a     Tel Aviv
+ffcc66         Cair
+99cc99         New York
+669999           New Delhi
+cc6699            San Francisco
+339966        Tokyo
+ 666699        Sudney
+
+ul:hover li:not(:hover) {opacity: .5;};
+ 
+   
+*/
