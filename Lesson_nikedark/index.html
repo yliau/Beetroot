@@ -58,21 +58,27 @@
   						<image id="Vector_Smart_Object_copy_2" data-name="Vector Smart Object copy 2" width="12" height="12" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAQAAAD8fJRsAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiChoCFBjcCiQeAAAAhElEQVQY02WOsQ2DQBAER+ZLQA5owAkhAS0QOkOWJapAcgf0ANWQuZbPSRkHtv5tvNHezun2IMnWNk8hW+7Ak6MMRqPhH3SqdumUN84AXAF4eAEgYuXqUasVYOH0E08WuWFO8fxOTh/SpJ3m+6PSXV1c1N0yg97NAcDBzT6D0Tr52hHgBb+cYmFkl2ZsAAAAAElFTkSuQmCC"/>
 					</svg>
 				</div>
-				<form action="" class="order_form" name="order_form">								
-					<select name="Size" class="order__list">
-					  <option value="Size" selected> Size</option>
-					  <option value="42">42</option>
-					  <option value="43">43</option>
-					  <option value="44">44</option>
-					  <option value="45">45</option>
-					</select>
-					<select name="Qty" class="order__list">
-					  <option value="Size" selected> Qty</option>
-					  <option value="1">1</option>
-					  <option value="2">2</option>
-					  <option value="3">3</option>
-					  <option value="4">4</option>
-					</select>
+				<form action="" class="order_form" name="order_form">	
+				<div class="options-selects">	
+					<label class="options__label" for="size">		
+						<select id="size" class="options__select" required value="size">
+						  <option value="size" selected disabled> Size</option>
+						  <option value="42">42</option>
+						  <option value="43">43</option>
+						  <option value="44">44</option>
+						  <option value="45">45</option>
+						</select>
+					</label>
+					<label class="options__label" for="qty">
+						<select id="qty" class="options__select" required value="qty">
+						  <option value="qty" selected disabled> Qty</option>
+						  <option value="1">1</option>
+						  <option value="2">2</option>
+						  <option value="3">3</option>
+						  <option value="4">4</option>
+						</select>
+					</label>
+				</div>
 					<input class="order__submit" type="submit" value="Add to cart">
 				</form>
 			</div>
