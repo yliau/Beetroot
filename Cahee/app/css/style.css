@@ -62,7 +62,8 @@
 
 html, body {
   width: 100%;
-  min-height: 100vh; }
+  min-height: 100vh;
+  line-height: 1; }
 
 body {
   font-size: 17px;
@@ -128,9 +129,13 @@ body {
   background-color: #f9f8fb;
   background: transparent url("../img/screen1.png") no-repeat;
   background-size: cover;
+  background-position: 50% 55%;
   position: relative; }
-  .main-screen__content h2 {
-    font-size: 60px; }
+  .main-screen__content h1 {
+    font-size: 60px;
+    font-weight: 900;
+    text-transform: capitalize;
+    margin: 0; }
   .main-screen__content p {
     font-size: 17px;
     line-height: 1.5;
@@ -147,13 +152,9 @@ body {
     color: #fff;
     text-transform: uppercase;
     font-size: 20px;
-    cursor: pointer;
-    background: #ebe9f9;
-    background: linear-gradient(-45deg, #496afe 0%, #496afe 50%, #5473fd 51%, #5473fd 100%); }
+    cursor: pointer; }
     .main-screen__content button:hover {
       background-color: #ff8866; }
-    .main-screen__content button:hover {
-      background: linear-gradient(45deg, #496afe 0%, #496afe 40%, #5473fd 41%, #5473fd 100%); }
   .main-screen__container {
     height: 100vh;
     display: -webkit-box;

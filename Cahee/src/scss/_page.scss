@@ -2,11 +2,13 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+
 }
 
 html, body {
 	width: 100%;
 	min-height: 100vh;
+	line-height: 1;
 }
 
 body {
@@ -68,11 +70,15 @@ body {
 	background-color: #f9f8fb;
 	background: transparent url($img_path + "screen1.png") no-repeat;	
 	background-size: cover;	
+	background-position: 50% 55%;
 	position: relative;
 
-	&__content {
-		h2 {
+	&__content  {
+		h1 {
 		font-size: $heading_size_h2;
+		font-weight: 900;
+		text-transform: capitalize;
+		margin: 0;
 
 	}
 
@@ -84,24 +90,10 @@ body {
 
 		& button {
 		@include button(#ff6033);
-		background: rgba(235,233,249,1);		
-        background: linear-gradient(
-        	-45deg, rgba(73,106,254,1) 0%, 
-        	rgba(73,106,254,1) 50%, 
-        	rgba(84,115,253,1) 51%, 
-        	rgba(84,115,253,1) 100%);		
-    	
-
-    	&:hover{
-		background: linear-gradient(
-        	45deg, rgba(73,106,254,1) 0%, 
-        	rgba(73,106,254,1) 40%, 
-        	rgba(84,115,253,1) 41%, 
-        	rgba(84,115,253,1) 100%);
-	}	
+			
+    	}	
 	}
-	}
-
+	
 	&__container {
 		height: 100vh;
 		display: flex;
