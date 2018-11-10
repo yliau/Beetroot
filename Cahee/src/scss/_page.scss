@@ -119,15 +119,24 @@ body {
 
 
 .section_2 {
-	padding: 5% 0;
+	min-height: 700px;
+background-image: url("../img/screen_2.png");
+ 	background-repeat: no-repeat;
+ 	background-position: 19% 50%;
+
+
 }
 
 .about-us {
+	padding-top: 9.5em;
+	height: 100%;
+	
 
 	&__content {
-		padding-left: 85px;		
-		padding-top: 9%;
+		
 		color: $secondary_color;
+		padding-left: 5em;
+		
 
 		& h1 {
 			font-size: $heading_size_h1;
@@ -136,7 +145,7 @@ body {
 
 		& p {
 			font-size: $text_md;
-			line-height: 1.5;
+			line-height: 27px;
 
 			&:not(:last-child) {
 				margin-bottom: 10px; 
@@ -145,7 +154,8 @@ body {
 	}
 
 	&__img {
-		height: 100%;
+		width: 50%;
+		height: 10px;
 		font-size: 0;
 	}
 }
@@ -153,10 +163,10 @@ body {
 
 .section_3 {
 	min-height: 790px;
-	padding: 180px 0 150px;
+	padding-top: 5.5em;
 	background-image: url("../img/screen_3.png");
  	background-repeat: no-repeat;
-  	background-position: 80% 50%;
+  	background-position: 81% 37%;
 }
 
 .our_services {
@@ -164,14 +174,13 @@ body {
 	justify-content: space-between;
 	flex-direction: row;
 	width: 100%;
-	
 	align-items: center;
 	$size: 100px;
 
 
 	&__title {
-		
-	
+		text-align: right;
+			
 		& h1 {
 			font-size: $heading_size_h1;
 			color: $secondary_color;
@@ -180,13 +189,18 @@ body {
 		}
 	}
 
+	&__links {
+		padding-top: 5em;
+
+	}
+
+
+
 	&__link {
 		display: flex;
 		text-align: center;
 		justify-content: center;
 		align-items: center;
-
-
 		text-decoration: none;
 		color: $main_color; 
 		font-size: $text_lg;
@@ -194,8 +208,7 @@ body {
 		min-width: $size * 3;
 		height: $size;	
 		border-right: 1px solid #9d9d9d;
-		
-		
+				
 		&::after {
 			content: "";
 			height: $size;
@@ -206,9 +219,8 @@ body {
 			top: 0;
 			right: -$size; 
 			background-color: #ffffff;
-			z-index: 10;		
+			z-index: 2;		
 			background-repeat: no-repeat;
-			
 		}
 	}
 
@@ -219,13 +231,15 @@ body {
 		font-weight: bold;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		align-items: flex-start;
+		padding-left: 3em;
 	}
 		
-	&__item {display: block;
+	&__item {
+		display: block;
 		position: relative;
-
 		height: 100px;
+		max-width: 400px;
 		width: calc(100%-$size);
 		background-color: #ffffff;
 		box-shadow: 0 0 5px 3px rgba(#000, .1);
@@ -262,27 +276,34 @@ body {
 .gallery {
 	text-align: center;
 	float: none;
-	padding-top: 90px;
-	padding-bottom: 120px;
+	padding-top: 5em;
+	padding-bottom: 7em;
 	text-align: center;
     
 
-	&__text {
+	&__heading {
 		margin-bottom: 45px; 
+	}
+
+
+	&__title {
+		margin-bottom: 25px; 	
 
 		& h1 {
 			font-size: $heading_size_h1;
 			margin: 0;
 		}
+	}
 
+	&__text {
 		& p {
 			max-width: 50%;
    			margin: 0 auto;
 			font-size: $text_md;
 			line-height: 1.5;
 		}
-
 	}
+	
 
 	& button {
 		@include button(#5585a2);			
@@ -290,7 +311,7 @@ body {
 
 
 	&__img {
-		max-width: 100%;
+		width: 100%;
 		height: 100%;
 		box-shadow: 0 0 5px 3px rgba(#000, .1);	
 		position: absolute;
@@ -313,7 +334,7 @@ body {
 	&__link {
 		display: block;
 		font-size: 0;
-		padding-top: 72.8%;
+		padding-top: 71.8%;
 		position: relative;
 	}	
 }
@@ -373,4 +394,155 @@ body {
 
 
 }
+
+
+
+.blog {
+	text-align: center;
+	float: none;
+	padding-top: 5em;
+	padding-bottom: 7em;
+	text-align: center;
+	color: $white-color;
+    
+
+	&__heading {
+		margin-bottom: 45px; 
+	}
+
+
+	&__title {
+		margin-bottom: 25px; 	
+
+		& h1 {
+			font-size: $heading_size_h1;
+			text-transform: capitalize;
+			margin: 0;
+		}
+	}
+
+	&__text {
+		& p {
+			max-width: 50%;
+   			margin: 0 auto;
+			font-size: $text_md;
+			line-height: 1.5;
+		}
+	}
+	
+
+	& button {
+		@include button(#f72b3b);			
+		}
+
+
+	&__img {
+		width: 100%;
+		height: 100%;
+		box-shadow: 0 0 5px 3px rgba(#000, .1);	
+		position: absolute;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+	}
+
+	&__news {
+		margin-bottom: 50px;
+	}
+		
+	&__link {
+		display: block;
+		font-size: 0;
+		padding-top: 83.8%;
+		position: relative;
+
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: 0px;
+			right: 0;
+			height: 50%;
+			width: 100%;
+			z-index: 3;
+            background-image: linear-gradient(to top, #262626 0%, transparent 100%);
+		}
+
+	}
+
+	&__post {
+		position: relative;
+
+	}	
+
+	&__post-day {
+		min-height: 60px;
+		min-width: 60px;
+		display: inline-block;
+		border-radius: 5px;
+	  	background-color: rgba(38, 38, 38, .502);
+	  	position: absolute;
+	  	left: 30px;
+	  	top: 30px;
+	  	z-index: 4;
+	  	font-size: 32px;
+		line-height: 25px;
+		font-weight: bold;
+		
+		padding-top: 4px;
+
+		& span > * {
+			text-align: center;
+			font-size: 21px;
+			font-weight: bold;
+			text-transform: uppercase;
+			}
+
+		}
+
+	&__title-link {
+		font-size: 20px;
+		line-height: 25px;
+		color: $white-color;
+		font-weight: bold;
+		text-decoration: none;
+		position: absolute;
+	  	left: 20px;
+	  	top: 205px;
+	  	z-index: 4;
+		text-align: left;
+	}	
+		
+	&__info {
+		
+		font-size: 13px;
+		line-height: 25px;
+		
+		position: absolute;
+	  	left: 20px;
+	  	top: 268px;
+	  	z-index: 4;
+		text-align: left;
+
+		& > * {
+			color:  $white-color;
+			text-decoration: none;
+		}
+	}	
+
+	
+}
+
+
+
+
+
+
+
+
+
+// Growing Food and a “Thirst” for Innovation
+
+
+
+
 
