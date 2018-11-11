@@ -26,7 +26,7 @@ body {
 	background-color: rgba(249,248,251,.5);
 	position: fixed;
 	width: 100%;
-	z-index: 1;
+	z-index: 10;
 
 	&__list {
 		min-height: 55px;
@@ -512,11 +512,9 @@ background-image: url("../img/screen_2.png");
 		text-align: left;
 	}	
 		
-	&__info {
-		
+	&__info {		
 		font-size: 13px;
-		line-height: 25px;
-		
+		line-height: 25px;		
 		position: absolute;
 	  	left: 20px;
 	  	top: 268px;
@@ -528,7 +526,6 @@ background-image: url("../img/screen_2.png");
 			text-decoration: none;
 		}
 	}	
-
 	
 }
 

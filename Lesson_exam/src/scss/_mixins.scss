@@ -1,0 +1,29 @@
+@mixin button {
+		letter-spacing: 1px;
+		color: $white-color;
+		text-transform: uppercase;
+		border: none;
+		padding: 15px 0;
+		min-height: 60px;
+		min-width: 225px;
+		
+		
+		background: rgba(73,106,254,1);
+		background: linear-gradient(
+				45deg, rgba(73,106,254,1) 0%,
+				rgba(73,106,254,1) 40%,
+				rgba(84,115,253,1) 41%,
+				rgba(84,115,253,1) 100%
+			);
+
+		&:hover {
+					background: rgba(43,106,254,1);
+		background: linear-gradient(
+				45deg, rgba(43,106,254,1) 0%,
+				rgba(43,106,254,1) 40%,
+				rgba(54,115,253,1) 41%,
+				rgba(54,115,253,1) 100%
+			);
+		}
+	
+}

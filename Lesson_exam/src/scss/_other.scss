@@ -1,0 +1,226 @@
+.section-menu {
+  	
+	background: $light-blue-color;	
+	background-size: cover;
+	height: 80px;
+	width: 100%;
+
+	
+}
+
+.nav-menu {
+	text-transform: uppercase;
+	&__list {
+		list-style: none;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__link {
+		line-height: 80px;
+		text-decoration: none;
+		color: $white-color;
+		display: block;
+		font-family: $main-font;
+		font-size: 14px;
+				
+		&:hover {
+ 			color: $dark-blue-color; 
+ 		}
+
+ 		&:focus {
+ 			color: $dark-grey-color;
+ 		}
+	}	
+
+	&__logo-link {
+		line-height: 80px;
+		letter-spacing: 2px;
+		font-size: 24px;
+	 	font-weight: bold;
+	 	font-family: $secondary-font;
+		text-decoration: none;
+		color: $main_color; 
+		display: block;
+
+		&:hover {
+ 			color: $dark-blue-color; 
+ 		}
+
+ 		&:focus {
+ 			color: $dark-grey-color;
+ 		}
+	}	
+}
+
+.choose_us {
+	background: transparent url($img_path + "choose-bg.jpg") no-repeat;	
+	background-size: cover;
+	min-height: 690px;
+	width: 100%;
+
+	&__title {
+		margin-bottom: 60px;
+	}
+
+	&__title h1 {
+		text-transform: capitalize;
+		font-size: 36px;
+		line-height: 26px;
+		font-family: $main-font;
+	}
+	
+	&__text {
+		margin-bottom: 45px;
+	}
+
+	&__text > * {
+		font-size: 16px;
+		line-height: 26px;
+		color: $light-color;
+		font-family: $secondary-font;
+		
+
+		&:not(:last-child) {
+    margin-bottom: 30px;
+		}
+
+	}	
+
+	& .col-6 {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 690px;
+	}
+
+	&__content {
+		padding-top: 70px;
+	}
+
+	&__button {
+		letter-spacing: 1px;
+		color: $white-color;
+		text-transform: uppercase;
+		border: none;
+		padding: 15px 0;
+		min-height: 60px;
+		min-width: 225px;
+		
+		
+		background: rgba(73,106,254,1);
+		background: linear-gradient(
+				45deg, rgba(73,106,254,1) 0%,
+				rgba(73,106,254,1) 40%,
+				rgba(84,115,253,1) 41%,
+				rgba(84,115,253,1) 100%
+			);
+
+		&:hover {
+					background: rgba(43,106,254,1);
+		background: linear-gradient(
+				45deg, rgba(43,106,254,1) 0%,
+				rgba(43,106,254,1) 40%,
+				rgba(54,115,253,1) 41%,
+				rgba(54,115,253,1) 100%
+			);
+		}
+	}
+
+	&__img {
+		
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-end;
+		
+	}
+
+	&__img > * {
+		width: 350px;
+		
+		&:not(:last-child) {
+		    margin-bottom: 5px;
+		    margin-right: 125px; 
+		}
+	}
+
+}
+
+
+
+.ba-text {
+		margin-bottom: 45px;
+
+	& > * {
+		font-size: 16px;
+		line-height: 26px;
+		color: $light-color;
+		font-family: $secondary-font;
+		
+		&:not(:last-child) {
+    margin-bottom: 30px;
+		}
+
+	}	
+
+}
+
+.spain {
+	background: transparent url($img_path + "house.jpg") no-repeat;	
+	background-size: cover;
+	min-height: 700px;
+	width: 100%;
+display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+
+	&__button {	
+	@include button;
+	}
+	
+
+	&__content {
+		padding: 50px 30px;
+		min-height: 370px;
+		background-color: rgba(57,57,57,.9);
+		
+
+
+	}
+
+	&__sab-heading {
+		font-size: 20px;
+		letter-spacing: 2px;
+		line-height: 26px;
+		color: $light-color;
+		font-family: $secondary-font;
+		
+	}
+
+	&__title > * {
+		text-transform: uppercase;
+		font-size: 20px;
+		line-height: 26px;
+		color: $white-color;
+		font-family: $secondary-font;
+	}
+
+	&__title {
+		padding-top: 20px;
+	margin-bottom: 20px;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
