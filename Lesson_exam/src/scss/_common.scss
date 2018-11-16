@@ -11,10 +11,12 @@ html, body {
 }
 
 body {
-	
+	// background: $light-grey-color;
+	border: $borderHeight solid #fff;
 	font-size: 100%; 
 	color: $white-color;
 	font-family: $main-font;
+
 }
 
 ul>li>a {

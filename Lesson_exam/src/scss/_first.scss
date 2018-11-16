@@ -1,9 +1,9 @@
-.section-home {
-  
+.section-home {  
 	background: transparent url($img_path + "header-bg.jpg") no-repeat;	
 	background-size: cover;
-	min-height: 100vh;
-	width: 100%;
+	min-height: calc(100vh - #{$borderHeight});
+	max-height: calc(100vh - #{$borderHeight});
+	width: 100%; 
 
 	& .container {
 		display: flex;
@@ -22,6 +22,7 @@
 		flex-direction: column;
 		justify-content: flex-end;
 		flex-basis: 40%;
+		align-items: center;
 	}
 
 	letter-spacing: 7px;
@@ -35,13 +36,14 @@
 	 	text-transform: uppercase;
 	 	font-size: 48px;
 	 	font-weight: bold;
-
+	 	letter-spacing: 3px;
 	}
 
 	&__sab-heading > * {
 	 	text-transform: capitalize;
 	 	font-size: 22px;
-	}
+	 	letter-spacing: 5.5px;
+	 }
 
 	&__search {
 		flex-basis: 25%;
