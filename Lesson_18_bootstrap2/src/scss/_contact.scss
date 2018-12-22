@@ -1,0 +1,46 @@
+.contact {
+
+	&__data {
+		padding: 80px;
+		background: url($img-path + 'contact-bg.jpg') no-repeat;
+		background-size: cover;
+		position: relative;
+
+		&::after {
+			content: "";
+			@include overlay;
+			background-color: rgba($blue-color, .97);
+			z-index: 0;			
+		}  
+
+		&-item {
+			position: relative;
+			z-index: 1;	
+
+			&:not(:last-child){
+				margin-bottom: 30px;
+			}	
+
+			h6 {
+				font-size: rem(20px);
+				font-weight: bold;
+				text-transform: capitalize;
+			}
+			
+			address {
+				margin-bottom: 0;
+			}
+
+		}
+
+	}
+
+	&__form {
+
+		
+
+	}
+
+
+}
+

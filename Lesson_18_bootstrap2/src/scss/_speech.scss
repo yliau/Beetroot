@@ -1,7 +1,8 @@
 .speech {
-	padding-top: rem(292px);
+	padding-top: rem(290px);
+	padding-bottom: rem(45px);
 
-	&.section-title {
+	.section-title {
 		z-index: -1;
 	}
 
@@ -25,19 +26,12 @@
 		@extend .about__text;
 		font-style: italic;
 		position: relative;
+		z-index: 2;
 
 		&::before {
 			@include decor(16px);
 			width: 90px;
 		} 
-
-		// &::after {
-		// 	content: '"'; 
-		// 	color: #da3e2d;
-		// 	font-size: 150px;
-		// 	font-weight: 900;
-		// 	font-family: 'Raleway';
-		// }
 	}
 
 	&__author {
@@ -45,7 +39,14 @@
 		font-weight: bold;
 	}
 
+	.quotes {
+		font-size: 150px;
+		font-weight: 900;
+		position: absolute;
+		color: #da3e2d;
+		z-index: -1;
+		// top: 0;
+	}
+
 }
 
-
-.quotes {}
