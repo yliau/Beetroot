@@ -1,0 +1,31 @@
+.footer {
+	min-height: 150px;
+
+	&__copyright {
+		margin-bottom: 0;
+		color: $form-color;
+		font-size: rem(14px);
+	}
+
+	&__logo {
+		margin-right: 1rem; 
+	}
+
+	&__social {
+		display: flex;
+
+		&-link {
+
+			&:hover {
+				color: $blue-color;
+			}
+		}
+
+		&-item {
+
+			&:not(:last-child) {
+				margin-right: 1rem; 
+			}
+		}
+	}
+}

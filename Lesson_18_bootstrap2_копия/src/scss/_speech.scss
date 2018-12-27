@@ -1,0 +1,52 @@
+.speech {
+	padding-top: rem(290px);
+	padding-bottom: rem(45px);
+
+	.section-title {
+		z-index: -1;
+	}
+
+	&__content{	
+		background-color: $pink-color;		
+		position: relative;
+	}
+
+	&__height {
+		min-height: 445px;
+	}
+
+	&__img {
+		position: absolute;
+		max-width: 100%;
+		transform: translate(-15px, -10%);
+		box-shadow: 0 0 10px 0 rgba($black-color, .3);
+	}
+
+	&__text {
+		@extend .about__text;
+		font-style: italic;
+		position: relative;
+		z-index: 2;
+
+		&::before {
+			@include decor(16px);
+			width: 90px;
+		} 
+	}
+
+	&__author {
+		text-transform: capitalize;
+		font-weight: bold;
+	}
+
+	.quotes {
+		font-size: 150px;
+		font-weight: 900;
+		position: absolute;
+		color: #da3e2d;
+		z-index: -1;
+		// top: 0;
+	}
+
+}
+
