@@ -1,7 +1,6 @@
-let userName
 
 const message = () => {
-	let userName = prompt ('What is your name?', ' ');
+	let userName = prompt ('What is your name?', ' '); ////указать ту ловер кейс
 
 	if (userName === null) {
 		alert ('Вход отменён');
@@ -12,7 +11,7 @@ const message = () => {
 		alert ('Я вас не знаю');
 		return;
 	} 
-	else if (userName == 'admin') {
+	else {    ////////////// if (userName === 'admin')
 		let password = prompt ('Password?', ' ');
 
 		if (password === null) {
