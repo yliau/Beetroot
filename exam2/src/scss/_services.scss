@@ -1,0 +1,113 @@
+.services {
+	text-align: center;
+	color: $grey-color;
+	padding-top: 40px;
+	@include min992 {  
+		padding-top: 120px;
+	}	
+
+	&__headings {
+		
+		width: 100%;
+		text-align: center;
+		background: url($img-path + "service-background.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;	
+		padding-top: 70px;	
+		padding-bottom: 70px;			
+
+		@include min992 {  
+			max-width: 410px;
+			padding-top: 110px;
+			padding-bottom: 0;
+		}
+	}
+
+	&__list {		
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__item {
+		width: 100%;
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		height: 300px;
+
+		@include min992 {  
+			max-width: 380px;
+			min-width: 300px;
+			width: 50%;
+			height: 400px;
+		}
+		
+		span {
+			color: $light-color;
+			font-weight: 400;
+			font-weight: bold;
+			text-align: center;
+		}
+	}
+
+	&__inner-ico {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__inner-icon {		
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		& > * {
+			color: $light-color;
+			font-weight: bold;
+		}		
+
+	}
+
+	&__heading {
+		font-size: 24px;
+		font-weight: bold;
+		margin-bottom: 16px;
+	}
+
+	&__icon {
+		margin-bottom: 24px;
+	}
+
+	&__text {
+		width: 70%;
+		font-size: 16px;
+		font-style: italic;		
+
+		&-white {
+			color: $light-color;
+			font-size: $base-size;
+			font-family: $main-font;
+			font-weight: 400;
+			font-style: italic;
+			text-align: center;
+			margin-bottom: 20px;
+			width: 80%;
+
+			@include min992 {  
+				margin-bottom: 0;
+				width: 100%;
+			}
+		}
+	}
+
+	& .headings {
+		margin-bottom: 40px;
+
+		@include min992 { 			
+			margin-bottom: 110px;
+		}
+	}
+}
+
+.bg-grey {
+	background: #dbdbdb;
+}

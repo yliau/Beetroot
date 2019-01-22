@@ -1,0 +1,53 @@
+.first-screen {
+	position: relative;
+	width: 100%;
+	background-color: $violet-color;
+	background-image: url($img-path + "main-bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;	
+	min-height: 100vh;
+	$paddingTop: 100px;
+	padding-top: $paddingTop;
+	
+	&__container {
+		position: relative;		
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		min-height: calc(100vh - #{$paddingTop});
+	}
+
+	&__content {
+		height: 100%;
+		align-items: center;
+		text-align: center;
+	}
+
+	&__heading {
+		margin-bottom: 30px;
+
+		& > * {
+			font-size: 60px;
+			line-height: 60px;
+
+			@include min768 {        
+				font-size: 72px;
+			}
+		}
+	}
+
+	&__row_menu {
+		width: 100%;
+	}
+
+	&__text {
+		font-size: 24px;
+		font-style: italic;
+		line-height: 35px;
+
+		@include min768 {        
+			font-size: 30px;
+		}
+	}	
+}

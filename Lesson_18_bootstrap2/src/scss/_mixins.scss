@@ -8,10 +8,10 @@
 }
 
 @mixin centered {
+	position: absolute;		
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%,-50%);
-	position: absolute;
+	transform: translate(-50%, -50%);
 }
 
 @function rem($target, $context: $base-size) {
@@ -19,35 +19,49 @@
 	@return $target / $context + 0rem;
 }
 
+
 @mixin decor($font-size, $line-height: 1.2){
-	content: "";
-	display: block;
+	display: none;
+	content: '';
 	width: 90px;
 	border-top: 1px solid $white-color;
 	position: absolute;
 	transform: translate(-150%, $font-size * $line-height / 2);
-	
+
 	@media screen and (min-height: 1367px){
 		transform: translate(-180%, $font-size * $line-height / 2);
 	}
+
+	@include min992 {
+		display: block;
+	}
 }
 
+
 @mixin placeholder {
-
-	::-webkit-input-placeholder {
-		@content; 
+	&::-webkit-input-placeholder {
+		@content;
 	}
-
-	::-moz-placeholder {
-		@content; 
+	&::-moz-placeholder {
+		@content;
 	}
-
-	:-moz-placeholder {
-		@content; 
+	&:-ms-input-placeholder {
+		@content;
 	}
+	&:-moz-placeholder {
+		@content;
+	}
+}
 
-	:-ms-input-placeholder {
-		@content; 
+@mixin min1367 {
+	@media all and (min-width: 1367px) {
+		@content;
+	}
+}
+
+@mixin max1366 {
+	@media all and (max-width: 1366px) {
+		@content;
 	}
 }
 
@@ -58,8 +72,20 @@
 	}
 }
 
+@mixin max991 {
+	@media all and (max-width: 991px) {
+		@content;
+	}
+}
+
 @mixin min768 {
 	@media all and (min-width: 768px) {
+		@content;
+	}
+}
+
+@mixin max767 {
+	@media all and (max-width: 767px) {
 		@content;
 	}
 }
@@ -68,4 +94,24 @@
 	@media all and (min-width: 576px) {
 		@content;
 	}
+}
+
+@mixin max575 {
+	@media all and (max-width: 575px) {
+		@content;
+	}
+}
+
+
+$z-index: (
+	content: 2,
+	navbar: 150000
+);
+
+@function z-index-func($key) {
+  @return map-get($z-index, $key);
+}
+
+@mixin z-index($key) {
+  z-index: z-index-func($key);
 }

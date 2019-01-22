@@ -1,0 +1,85 @@
+
+
+.about {
+	padding-top: 40px;
+	@include min992 {  
+		padding-top: 120px;
+	}
+
+	&__headings {
+		
+		text-align: center;
+		background: url($img-path + "about.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;	
+		padding-top: 40px;
+		min-height: 200px;
+
+		@include min992 {  
+			min-width: 380px;
+			padding-top: 74px;
+			min-height: 555px;
+		}
+	}
+
+	&__icon {
+		margin-bottom: 35px;
+	}
+
+	&__content {
+		display: flex;
+		justify-content: space-around;
+		flex-direction: column;
+		height: 100%;
+		align-items: center;
+		padding-top: 40px;
+		min-height: 200px;
+
+		@include min992 {  
+			padding-top: 74px;
+			min-height: 555px;
+		}
+
+	}
+
+	&__bold {
+		font-weight: bold;
+	}
+
+	&__italic {
+		font-style: italic;
+	}
+
+
+	&__text {
+		margin-bottom: 40px;
+		flex-grow: 2;
+
+		@include min992 {  
+			margin-bottom: 0;
+		}
+
+		& > * {
+			color: $grey-color;
+			font-size: 20px;
+			line-height: 25px;			
+
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	&__btn {
+
+		flex-grow: 2;
+
+		& > * {
+			@include btn($grey-btn-color);
+		}
+	}
+}
+
+.pt {
+
+}

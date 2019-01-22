@@ -1,0 +1,99 @@
+.works {
+	background-color: $violet-color;
+	background-image: url($img-path + "works-background.png");
+	background-repeat: no-repeat;
+	background-size: cover;	
+	padding-top: 45px;
+	padding-bottom: 60px;
+	min-height: 100vh;
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around; 
+		align-items: center;
+		text-align: center;
+
+
+
+	}
+
+	&__btn {
+		& > * {
+			@include btn($white-color);
+		}
+	}
+
+	
+}
+
+
+
+.carousel__box{
+	position: relative;
+	min-height: 300px;
+	min-width: 300px;
+	max-width: 70vh; 
+	width: 100%;
+	margin: 0 auto;
+}
+.carousel__content{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+}
+.carousel__box:before{
+	content: '';
+	display: block;
+	padding-top: 100%;
+}
+
+
+.carousel {
+	width: 100%;
+}
+
+
+.carousel-indicators li {
+
+	width: 9px;
+	height: 9px;
+	color: transparent;
+	border: 2px solid #fff;
+	border-radius: 50%;
+}
+
+.carousel-control-next:before {
+	content: "";
+	display: block;
+	width: 30px;
+	height: 30px;
+	border: 2px solid transparent;
+	border-right-color: $light-color;
+	border-bottom-color: $light-color;
+	position: absolute;
+	z-index: 0;
+	top: 50%;
+	right: -60px;
+	transform: rotate(-45deg);
+	cursor: pointer;
+}
+
+
+.carousel-control-prev:before  {
+	content: "";
+	display: block;
+	width: 30px;
+	height: 30px;
+	border: 2px solid transparent;
+	border-left-color: $light-color;
+	border-top-color: $light-color;
+	position: absolute;
+	z-index: 0;
+	top: 50%;
+	left: -60px;
+	transform: rotate(-45deg);
+	cursor: pointer;
+}

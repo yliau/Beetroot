@@ -1,0 +1,90 @@
+.team {
+	
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		min-height: 820px;
+		padding-top: 50px;
+		padding-bottom: 100px;
+
+		&:first-child {
+			// flex-grow: 1;
+		}
+	}
+
+	// &__slider {
+	// 	margin-bottom: 0;
+	// }
+
+	.col-4 {
+		position: relative;
+	}
+
+	.col-12 {
+		text-align: center;
+	}
+
+	&__icon {
+		margin-bottom: 25px;
+	}
+
+	&__slide {
+		margin-top: 124px;
+		background: $white-color;
+		min-height: 283px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+	}
+
+	&__contacts {
+		background: $violet-color;
+		display: flex;
+		justify-content: space-around;
+		min-height: 70px;
+		align-items: center;
+		padding-left: 30px;
+		padding-right:  30px;
+	}
+
+	&__name {		
+		color: $violet-color;
+		font-family: $heading-font;
+		font-weight: bold;		
+		text-transform: uppercase;
+		margin-bottom: 20px;
+	}
+
+	&__name,
+	&__position {
+		font-size: 24px;
+		text-align: center;
+	}
+
+	&__position {		
+		color: $grey-color;
+		font-family: $main-font;
+		font-style: italic;	
+		margin-bottom: 40px;	
+		text-transform: capitalize;
+	}
+
+	&__photo {
+
+		@include centered;
+		max-width: 255px;
+		// height: 100%;
+		// top: 0;
+		// left: 16%;
+		// position: absolute;
+		border: 12px solid $bg-color;
+		border-radius: 50%;
+	}
+}
+
+
+.slick-arrow {
+color: $grey-color;
+}

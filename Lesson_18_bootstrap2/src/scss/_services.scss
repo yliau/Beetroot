@@ -1,23 +1,40 @@
 .services {
-
+	position: relative;
+	margin-bottom: 5rem;
+	padding-top: rem(150px);
+	
+	@include min992 {
+		margin-bottom: 0;
+		padding-top: 0;
+	}
 
 	&__content {
-		position: relative; 
+		position: relative;
 	}
 
 	.grid-item {
-
+		
 		&__title {
-			margin-bottom: 30px;
 			display: flex;
+			margin-bottom: rem(16px);
+
+			@include min576 {
+				margin-bottom: rem(30px);
+			}
 
 			& > * {
 				text-transform: capitalize;
 				margin: 0;
-				font-size: rem(24px);
-				letter-spacing: 2px;
+				font-size: rem(20px);
 				font-weight: 300;
+				letter-spacing: 2px;
+				
+				@include min992 {
+					font-size: rem(24px);
+				}
+
 			}
+
 		}
 
 		&__icon {
@@ -25,11 +42,16 @@
 		}
 
 		&__text {
-			line-height: 1.85;
 			font-size: rem(14px);
+			line-height: 1.85;
 			font-weight: 200;
 			letter-spacing: 1px;
-			margin-bottom: 30px;
+			margin-bottom: rem(16px);
+			min-height: 100px;
+
+			@include min576 {
+				margin-bottom: rem(30px);
+			}
 		}
 	}
 }

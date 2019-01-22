@@ -10,7 +10,49 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<header class="main-header">
+
+<header class="main-header">
+	<div class="container">		
+			<nav class="row navbar navbar-expand-lg navbar-light bg-light">
+				<div class="col main-header__logo">
+					<a href="/">
+						<span>Cahee</span>
+					</a>
+				</div>
+				<div class="col main-header__menu">
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNav">
+						<ul class="navbar-nav main-header__list">
+							<li class="nav-item active main-header__item">
+								<a class="nav-link main-header__link" href="#">Home</a>
+							</li>
+							<li class="nav-item main-header__item">
+								<a class="nav-link main-header__link" href="#about">about</a>
+							</li>
+							<li class="nav-item main-header__item">
+								<a class="nav-link main-header__link" href="#services">services</a>
+							</li>
+							<li class="nav-item main-header__item">
+								<a class="nav-link main-header__link" href="#gallery">gallery</a>
+							</li>
+							<li class="nav-item main-header__item">
+								<a class="nav-link main-header__link" href="#blog">blog</a>
+							</li>
+							<li class="nav-item main-header__item">
+								<a class="nav-link main-header__link" href="#contact">contact</a>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+
+			</nav>
+	</div>
+</header>
+
+	<header class="main-header1">
 		<div class="container">			
 			<div class="row">
 				<div class="col main-header__logo">
@@ -18,7 +60,13 @@
 						<span>Cahee</span>
 					</a>
 				</div>
-				<div class="col main-header__menu ">
+				<div class="col main-header__menu collapse navbar-collapse">
+					<div id="nav-icon" class="nav-icon">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
 					<ul class="main-header__list">
 						<li class="main-header__item">
 							<a href="/" class="main-header__link">HOME</a>
@@ -36,7 +84,7 @@
 							<a href="#blog" class="main-header__link">BLOG</a>
 						</li>
 						<li class="main-header__item">
-							<a href="#" class="main-header__link">CONTACT</a>
+							<a href="#contact" class="main-header__link">CONTACT</a>
 						</li>
 					</ul>
 				</div>
@@ -310,6 +358,7 @@ crossorigin="anonymous"></script>
 crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
 crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
 
 </body>
 </html>
