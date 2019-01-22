@@ -13,21 +13,14 @@
 		justify-content: space-around; 
 		align-items: center;
 		text-align: center;
-
-
-
 	}
 
 	&__btn {
 		& > * {
 			@include btn($white-color);
 		}
-	}
-
-	
+	}	
 }
-
-
 
 .carousel__box{
 	position: relative;
@@ -50,11 +43,9 @@
 	padding-top: 100%;
 }
 
-
 .carousel {
 	width: 100%;
 }
-
 
 .carousel-indicators li {
 
@@ -76,11 +67,14 @@
 	position: absolute;
 	z-index: 0;
 	top: 50%;
-	right: -60px;
+	right: -5px;
 	transform: rotate(-45deg);
 	cursor: pointer;
-}
 
+	@include min576 {  
+		right: -20px;
+	}
+}
 
 .carousel-control-prev:before  {
 	content: "";
@@ -93,7 +87,11 @@
 	position: absolute;
 	z-index: 0;
 	top: 50%;
-	left: -60px;
+	left: -5px;
 	transform: rotate(-45deg);
 	cursor: pointer;
+
+	@include min576 {  
+		left: -20px;
+	}
 }

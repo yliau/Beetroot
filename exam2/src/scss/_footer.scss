@@ -1,0 +1,53 @@
+.footer {
+	background: $violet-color;
+	height: 185px;
+	display: flex;
+	align-items: space-around;
+
+	@include min768 {
+
+		align-items: center;
+	}
+
+	.row {
+		height: 100%;
+	}
+
+	&__contacts {
+@include  center;
+
+		@include min768 {
+			display: flex;
+			justify-content: flex-end;		
+			align-items: center;
+
+			&__link:not(:last-child) {
+				margin-right: 25px;
+			}
+
+		}
+
+		&__link:not(:last-child) {
+			margin-right: 25px;
+		}	
+
+		&__link {
+			display: inline-block;
+		}
+
+
+
+	}
+
+
+
+
+	&__copyright {
+
+	@include  center;
+
+		& span {
+			font-weight: bold;
+		}
+	}
+}

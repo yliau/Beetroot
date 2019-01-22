@@ -22,10 +22,11 @@
 	font-style: normal
 }
 
-@import 'slick';
-@import 'slick-theme';
+
 @import 'variables';
 @import 'mixins';
+@import 'slick';
+@import 'slick-theme';
 @import 'common';
 @import 'menu';
 @import 'first-screen';
@@ -34,7 +35,7 @@
 @import 'works';
 @import 'team';
 @import 'contact';
-
+@import 'footer';
 
 
 /////////////////////////// REMOVE BEFORE PRODACTION 
@@ -48,7 +49,7 @@
 // 
 // 
 // 
-// @import 'footer';
+// 
 
 @media all and (max-width: 319px)  {
 	*{
@@ -56,17 +57,16 @@
 	}
 }
 
-// .header
-.footer,
-// .first-screen,
-// .about,
+header,
+.first-screen,
+.about,
 .team,
 .a456,
-// .services,
+.services,
 .works,
-.speech,
-.partners,
+.team,
 .contact
+
  {
-	display: none!important;
+	// display: none!important;
 }

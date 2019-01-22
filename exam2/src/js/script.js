@@ -2,10 +2,33 @@
 	'use strict';
 	$(function(){
 		$('.team__slider').slick({
-			dots: true,
+			// dots: true,
+			slidesToScroll: 1,
 			infinite: true,
 			speed: 300,
-			slidesToShow: 3, 
+slidesToShow: 3,
+
+
+responsive: [
+   
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint:  768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    
+  ]
+
+			
 		});
 	})
 })(jQuery);
@@ -25,7 +48,7 @@ function initMap() {
         	zoom: 7
         });
 
-       
+
         let marker = new google.maps.Marker({
         	map: map,
         	position: myLatLng,
@@ -35,8 +58,8 @@ function initMap() {
 
 
 
-$( () => {
-	
+    $( () => {
+
 	//On Scroll Functionality
 	$(window).scroll( () => {
 		var windowTop = $(window).scrollTop();
