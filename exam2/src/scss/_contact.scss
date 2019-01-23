@@ -1,8 +1,234 @@
-#map {
-	// width: 100%;
-	min-height: 70vh;
+#map {	
+	height:100%;
+	width: 100%;
+	position: absolute; 	
+	top: 0; 
+	left: 0;
+	z-index: 1;
+}
+
+#map::after {
+	content: "";
+	display: block;
+	background-color: rgba($violet-color, .8);
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 2;
+}
+
+.contact {
+
+	position: relative;
+	min-height: 100vh;
 	max-height: 100%;
-	// position: relative;
- //    overflow: hidden;
- //    display: block;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column; 
+	align-items: center;
+	background: rgba($violet-color, .9);
+	z-index: 3;	
+
+	padding-top: 50px;
+	padding-bottom: 100px;
+	min-height: 100vh;
+	max-height: 100%;
+	position: relative;
+
+
+
+	&__icon {
+		margin-bottom: 18px;
+	}
+
+	.container {
+		// display: flex;
+		// flex-direction: column;
+		// justify-content: space-between;
+		// align-items: center;
+		
+		width: 100%;			
+		
+		z-index: 1;
+	}
+
+	.col-12 {
+		text-align: center;
+	}
+
+
+	.col_10 {
+		width: 80%;	
+	}
+
+	&__form {
+		max-width: 860px;
+		width: 100%;		
+		@include  center;
+		flex-direction: column;
+		z-index: 3;
+	}
+
+
+	&__message {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-direction: column;
+		margin-bottom: 55px;
+	}
+
+	&__username {
+
+
+		flex-direction: column;
+		display: flex; 
+		justify-content: space-between; 
+		width: 100%;
+
+		@include min768 {  
+			
+			flex-direction: row;
+		}
+
+	}
+
+	input[type="text"] {
+		margin-right: 0;
+		margin-bottom: 30px;
+
+		@include min768 {  
+			margin-right: 30px;
+			margin-bottom: 0;
+		}
+	}
+
+
+	input,
+	textarea {
+		width: 100%;
+		background-color: rgba($bg-color, .8);
+		border: none;
+		border-radius: 4px;	
+		font-size: 15px;
+		font-weight: 300;
+		color: $grey-color; 
+		outline: none;	
+
+		&:hover,
+		&:focus {
+			background-color: darken($bg-color,5%);
+		}				
+	}
+
+	input:not([type="submit"]) {
+		height: 56px;
+		max-width: 414px;	
+		padding-top: 5px;
+		padding-left: 25px;
+
+	}
+
+	textarea {
+		min-height: 200px;
+		margin-top: 27px;
+		padding-top: 20px;
+		padding-left: 25px;
+	}
+
+	input[type="submit"] {
+		max-width: 293px;
+		font-weight: bold;
+		color: $white-color;
+		background-color: $violet-color;
+		min-height: 65px;
+		box-shadow: 0 5px #8783b0;
+		position: relative;
+		text-transform: uppercase;
+		cursor: pointer;
+		font-size: 20px;
+		letter-spacing: 0px;
+		line-height: 26px;
+		font-family: $heading-font;
+		align-self: center;
+
+		&:hover {
+			background-color: darken( $violet-color,2%);
+		}
+	}
+
+}
+
+@include placeholder {
+	color: $white-color;
+	text-transform: capitalize;	
+	font-size: 16px;
+	line-height: $base-size;
+	font-family: $main-font;
+	font-weight: 400;
+	font-style: italic;	
+}
+
+.animate-label {
+	$size: 90px;
+	min-width: 320px;
+	background-color: rgba($white-color, .5);
+	position: absolute;
+	right: 0;
+	color: $grey-color;
+	font-size: 16px;
+	font-family: $main-font;
+	font-weight: 400;
+	text-align: center;
+	display: flex;
+	cursor: pointer;
+	z-index: 5;
+	transform: translateX(calc(100% - #{$size}));
+	will-change: transform;
+	transition: transform .4s ease;
+
+	&__container {
+		height: (calc(2 * #{$size}));
+		margin-bottom: 40px;
+
+		@include max767 {  
+			display: none;
+		}
+	}
+	
+	@include max767 {  
+		display: none;
+
+	}
+
+	&:hover {
+		transform: translateX(0);
+	}
+
+	&-address {
+		top: 220px;
+	}
+	&-phone {
+		top: (calc(220px + #{$size}));
+	}
+
+	.icon, 
+	span {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: $size;
+	}
+
+	.icon {
+		width: $size;
+		background-color: $violet-color;
+	}
+
+	.address {
+		width: calc(100% - #{$size});
+	}
 }

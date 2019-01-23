@@ -3,11 +3,14 @@
 	background-image: url($img-path + "works-background.png");
 	background-repeat: no-repeat;
 	background-size: cover;	
-	padding-top: 45px;
-	padding-bottom: 60px;
 	min-height: 100vh;
+	$paddingTop: 45px;
+	padding-top: $paddingTop;
+	$paddingBottom: 60px;
+	padding-bottom: $paddingBottom;
 
 	.container {
+		min-height: calc(100vh - #{$paddingTop} - #{$paddingBottom});
 		display: flex;
 		flex-direction: column;
 		justify-content: space-around; 

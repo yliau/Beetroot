@@ -1,7 +1,7 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 body {
 	font-family: $main-font;
@@ -64,4 +64,45 @@ p {
 	&-gray {
 		color: $grey-color;
 	}
+}
+
+
+.up {
+	$size: 84px;
+	width: $size;
+	height: $size;
+	font-size: 1.5rem;
+	opacity: .5;
+	position: fixed;
+	right: 10%;
+	bottom: 10%;
+	background-color: $violet-color;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	// color: $grey-btn-color;
+	cursor: pointer;
+	transition: opacity .1s ease;
+	z-index: 20;
+	box-shadow: 0 4px 30px -5px rgba(#000, 0.2);
+}
+
+.up::after {
+	content: "";
+	opacity: 1;
+	display: block;
+	width: 30px;
+	height: 30px;
+	border: 2px solid transparent;
+	border-right-color: $white-color;
+	border-top-color: $white-color;
+	position: absolute;
+	z-index: 21;
+	top: 35px;
+	// right: 0;
+	transform: translate(-50%, -50%);
+	transform: rotate(-45deg);
+	cursor: pointer;
+
+	
 }
