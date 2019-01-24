@@ -28,7 +28,6 @@
 
 .logo__link {
     @include object(65px,65px,$header-bg);
-
 }
 
 #menu {
@@ -120,3 +119,11 @@
     }   
 }
 
+// .menu a:hover,
+// menu a.active {
+//     color: red;
+// }
+
+.active {
+    color: $grey-color;
+}
