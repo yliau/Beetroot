@@ -39,6 +39,17 @@ $('.up').on('click', () => {
       });
     });
 
+
+$(window).scroll(function() {
+const height = $(window).scrollTop();
+if(height < 500){
+$('.up').addClass('d-none');
+} else{
+$('.up').removeClass('d-none');
+}
+});
+
+
 })(jQuery);
 
 
@@ -259,7 +270,7 @@ $( () => {
   $(window).scroll( () => {
     var windowTop = $(window).scrollTop();
     windowTop > 100 ? $('nav').addClass('navShadow') : $('nav').removeClass('navShadow');
-    windowTop > 100 ? $('ul').css('top','100px') : $('ul').css('top','160px');
+    windowTop > 100 ? $('ul').css('top','82px') : $('ul').css('top','92px');
   });
   
   //Click Logo To Scroll To Top

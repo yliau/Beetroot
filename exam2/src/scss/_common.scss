@@ -68,9 +68,17 @@ p {
 
 
 .up {
-	$size: 84px;
+
+	$size: 60px;
 	width: $size;
 	height: $size;
+
+	@include min768 {
+		$size: 84px;
+		width: $size;
+		height: $size;			
+	}
+	
 	font-size: 1.5rem;
 	opacity: .5;
 	position: fixed;
@@ -80,7 +88,6 @@ p {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	// color: $grey-btn-color;
 	cursor: pointer;
 	transition: opacity .1s ease;
 	z-index: 20;
@@ -98,11 +105,13 @@ p {
 	border-top-color: $white-color;
 	position: absolute;
 	z-index: 21;
-	top: 35px;
-	// right: 0;
+	top: 38%;
 	transform: translate(-50%, -50%);
 	transform: rotate(-45deg);
 	cursor: pointer;
+}
 
-	
+
+.d-none {
+	display: none;
 }

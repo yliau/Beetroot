@@ -5,7 +5,7 @@
     transition: all 0.3s;
     @include center;
     &.navShadow {
-        box-shadow: 0 4px 30px -5px rgba(#000, 0.2);
+        // box-shadow: 0 4px 30px -5px rgba(#000, 0.2);
         height: 100px;
         background: $violet-color;        
     }
@@ -96,10 +96,10 @@
         position: absolute;
         top: 100px;
         left: null;
-        right: null;
+        right: 0;
         bottom: null;
         transform: translate(null, null);
-        box-shadow: 0 5px 30px -4px rgba(#000, 0.2);
+        box-shadow:  120px 0 0 $violet-color;
         transition: all 0.3s;
         &.showMenu {
             height: 240px;
