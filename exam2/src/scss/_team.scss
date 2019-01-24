@@ -77,8 +77,16 @@
 		border: 12px solid $bg-color;
 		border-radius: 50%;
 	}
+
+	&__social-links {
+		&:hover,
+		&:focus {
+			opacity: .5;		
+		}
+	}
 }
 
 .slick-arrow {
 	color: $grey-color;
 }
+

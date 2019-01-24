@@ -15,15 +15,15 @@
 }
 
 @mixin object($width, $height, $bg) {
-    width: $width;
-    height: $height;
-    background: $bg;
+	width: $width;
+	height: $height;
+	background: $bg;
 }
 
 @mixin center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 @function rem($target, $context: $base-size) {
@@ -137,6 +137,6 @@
 	&:hover,
 	&:focus {
 		box-shadow: 0 0 10px rgba(0,0,0,0.5);
+		transition: all 1s ease 0s;
 	}
-
 }

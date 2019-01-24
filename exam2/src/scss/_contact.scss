@@ -1,25 +1,10 @@
 #map {	
 	height:100%;
 	width: 100%;
-	position: absolute; 	
-	top: 0; 
-	left: 0;
-	z-index: 1;
-}
-
-#map::after {
-	content: "";
-	display: block;
-	background-color: rgba($violet-color, .8);
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: 2;
+	@include overlay;	
 }
 
 .contact {
-
 	position: relative;
 	min-height: 100vh;
 	max-height: 100%;
@@ -28,14 +13,18 @@
 	justify-content: center;
 	flex-direction: column; 
 	align-items: center;
-	background: rgba($violet-color, .9);
-	z-index: 3;	
-
+	background: $violet-color;
+	overflow: hidden;
 	padding-top: 50px;
 	padding-bottom: 100px;
 	min-height: 100vh;
 	max-height: 100%;
-	position: relative;
+	
+	.bg {
+		@include overlay;
+		z-index: 2;
+		background-color: rgba(159, 154, 207, 0.4);
+	}
 
 
 
@@ -44,14 +33,8 @@
 	}
 
 	.container {
-		// display: flex;
-		// flex-direction: column;
-		// justify-content: space-between;
-		// align-items: center;
-		
 		width: 100%;			
-		
-		z-index: 1;
+		z-index: 5;
 	}
 
 	.col-12 {
@@ -68,7 +51,7 @@
 		width: 100%;		
 		@include  center;
 		flex-direction: column;
-		z-index: 3;
+		z-index: 4;
 	}
 
 
@@ -158,8 +141,13 @@
 		&:hover {
 			background-color: darken( $violet-color,2%);
 		}
-	}
 
+		&:active {
+			box-shadow: none;
+			transform: translateY(5px);
+			transition: transform .4s ease;
+		}
+	}
 }
 
 @include placeholder {
@@ -232,3 +220,4 @@
 		width: calc(100% - #{$size});
 	}
 }
+

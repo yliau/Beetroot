@@ -25,11 +25,11 @@ responsive: [
   ]			
 		});
 	})
-})(jQuery);
+
 
 const form = $('#contactForm');
 form.on('submit', (e) => {
-	e.preventDefault();
+  e.preventDefault();
 });
 
 $('.up').on('click', () => {
@@ -39,9 +39,11 @@ $('.up').on('click', () => {
       });
     });
 
+})(jQuery);
+
 
 function initMap() {
-	let myLatLng = {lat: 49.062785, lng: 33.4156805};
+  let myLatLng = {lat: 49.062785, lng: 33.4156805};
 
         let style = [
   {
@@ -236,59 +238,55 @@ function initMap() {
         // Create a map object and specify the DOM element
         // for display.
         const map = new google.maps.Map(document.getElementById('map'), {
-        	center: myLatLng,
-        	zoom: 15,
-        	scrollwheel: false,
-        	styles: style,
+          center: myLatLng,
+          zoom: 15,
+          scrollwheel: false,
+          styles: style,
         });
 
 const image = 'img/map-marker.png';
-
         let marker = new google.maps.Marker({
-        	map: map,
-        	position: myLatLng,
-        	icon: image,
-        	
+          map: map,
+          position: myLatLng,
+          icon: image,          
         });
+  }
 
 
-
-
-    }
-
-    $( () => {
-
-	//On Scroll Functionality
-	$(window).scroll( () => {
-		var windowTop = $(window).scrollTop();
-		windowTop > 100 ? $('nav').addClass('navShadow') : $('nav').removeClass('navShadow');
-		windowTop > 100 ? $('ul').css('top','100px') : $('ul').css('top','160px');
-	});
-	
-	//Click Logo To Scroll To Top
-	$('#logo').on('click', () => {
-		$('html,body').animate({
-			scrollTop: 0,
-		},4);
-	});
-	
-	//Smooth Scrolling Using Navigation Menu
-	$('a[href*="#"]').on('click', function(e){
-		$('html,body').animate({
-			scrollTop: $($(this).attr('href')).offset().top - 100
-		},4);
-		e.preventDefault();
-	});
-	
-	//Toggle Menu
-	$('#menu-toggle').on('click', () => {
-		$('#menu-toggle').toggleClass('closeMenu');
-		$('ul').toggleClass('showMenu');
-		
-		$('li').on('click', () => {
-			$('ul').removeClass('showMenu');
-			$('#menu-toggle').removeClass('closeMenu');
-		});
-	});
-	
+$( () => {
+ 
+  //On Scroll Functionality
+  $(window).scroll( () => {
+    var windowTop = $(window).scrollTop();
+    windowTop > 100 ? $('nav').addClass('navShadow') : $('nav').removeClass('navShadow');
+    windowTop > 100 ? $('ul').css('top','100px') : $('ul').css('top','160px');
+  });
+  
+  //Click Logo To Scroll To Top
+  $('.logo').on('click', () => {
+    $('html,body').animate({
+      scrollTop: 0
+    },500);
+  });
+  
+  //Toggle Menu
+  $('#menu-toggle').on('click', () => {
+    $('#menu-toggle').toggleClass('closeMenu');
+    $('ul').toggleClass('showMenu');
+    
+    $('li').on('click', () => {
+      $('ul').removeClass('showMenu');
+      $('#menu-toggle').removeClass('closeMenu');
+    });
+  });
+  
 });
+
+$('.nav-menu__link').on('click', function(e){
+      e.preventDefault();
+      const top = $($(this).attr('href'))[0].offsetTop;
+      window.scrollTo({
+        top: top,
+        behavior: 'smooth'
+      });
+    });

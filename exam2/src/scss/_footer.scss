@@ -42,9 +42,7 @@
 	&__social-links {
 		&:hover,
 		&:focus {
-
-			color: $white-color;
-		
+			opacity: .5;		
 		}
 	}
 
