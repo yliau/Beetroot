@@ -2,7 +2,7 @@
 	background: $violet-color;
 	height: 130px;
 	display: flex;
-	align-items: space-around;
+	justify-content: space-around;
 
 	@include min768 {
 		height: 185px;
@@ -15,7 +15,6 @@
 
 	&__contacts {
 		@include  center;
-
 		@include min768 {
 			display: flex;
 			justify-content: flex-end;		

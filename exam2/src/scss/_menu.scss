@@ -1,11 +1,10 @@
 .nav-menu {
-    @include object(100%,120px,transparent);
+    @include object(100%,120px,none);
     position: fixed;
     z-index: 16;
     transition: all 0.3s;
     @include center;
     &.navShadow {
-        // box-shadow: 0 4px 30px -5px rgba(#000, 0.2);
         height: 100px;
         background: $violet-color;        
     }
@@ -94,10 +93,7 @@
         @include object(50%,0,$violet-color);
         position: absolute;
         top: 100px;
-        left: null;
         right: 0;
-        bottom: null;
-        transform: translate(null, null);
         box-shadow:  120px 0 0 $violet-color;
         transition: all 0.3s;
         &.showMenu {
@@ -118,14 +114,6 @@
         transition: all 0.3s 0.1s;
     }   
 }
-
-// .fixed-home,
-// .fixed-about,
-// .fixed-services,
-// .fixed-works,
-// .fixed-contact {
-//     color: $white-color;
-// }
 
 .home-active,
 .about-active,
