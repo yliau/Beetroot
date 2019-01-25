@@ -304,7 +304,7 @@ $.fn.isInViewport = function() {
   var viewportTop = $(window).scrollTop();
   var viewportBottom = viewportTop + $(window).height();
 
-  return elementBottom > viewportTop && elementTop < viewportBottom;
+  return elementBottom > viewportTop && elementTop < viewportBottom && (elementTop < (viewportTop + 100)) && !(elementBottom < (viewportTop + 100));
 };
 
 $(window).on('resize scroll', function() {
@@ -317,3 +317,26 @@ $(window).on('resize scroll', function() {
     }
   });
 });
+
+
+
+// $.fn.isInViewport = function() {
+//   var elementTop = $(this).offset().top;
+//   var elementBottom = elementTop + $(this).outerHeight();
+
+//   var viewportTop = $(window).scrollTop();
+//   var viewportBottom = viewportTop + $(window).height();
+
+//   return elementBottom > viewportTop && elementTop < viewportBottom && (elementBottom > 300);
+// };
+
+// $(window).on('resize scroll', function() {
+//   $('.section').each(function() {
+//       var activeSection = $(this).attr('id');
+//     if ($(this).isInViewport()) {
+//       $('#fixed-' + activeSection).addClass(activeSection + '-active');
+//     } else {
+//       $('#fixed-' + activeSection).removeClass(activeSection + '-active');
+//     }
+//   });
+// });
