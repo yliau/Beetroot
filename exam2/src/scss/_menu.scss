@@ -119,11 +119,18 @@
     }   
 }
 
-// .menu a:hover,
-// menu a.active {
-//     color: red;
+// .fixed-home,
+// .fixed-about,
+// .fixed-services,
+// .fixed-works,
+// .fixed-contact {
+//     color: $white-color;
 // }
 
-.active {
+.home-active,
+.about-active,
+.services-active,
+.works-active,
+.contact-active {
     color: $grey-color;
 }

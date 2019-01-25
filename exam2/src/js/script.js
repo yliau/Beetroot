@@ -299,34 +299,87 @@ $('.nav-menu__link').on('click', function(e){
 
 
 
-var menu_selector = ".menu"; // Переменная должна содержать название класса или идентификатора, обертки нашего меню.
-function onScroll(){
-var scroll_top = $(document).scrollTop();
-$(menu_selector + " a").each(function(){
-var hash = $(this).attr("href");
-var target = $(hash);
-if (target.position().top <= scroll_top && target.position().top + target.outerHeight() > scroll_top) {
-$(menu_selector + " a.active").removeClass("active");
-$(this).addClass("active");
-} else {
-$(this).removeClass("active");
-}
+// jQuery(document).ready(function($) {
+//   $('div').viewportChecker({
+//       classToAdd: 'active',
+//       classToRemove: 'invisible',
+//       offset: [100 OR 10%],
+//       invertBottomOffset: true,
+//       repeat: false,
+//       callbackFunction: function(elem, action){},
+//       scrollHorizontal: false
+//   });
+// });
+
+
+
+// $(window).scroll(function() {
+//     var top_of_element = $("#element").offset().top;
+//     var bottom_of_element = $("#element").offset().top + $("#element").outerHeight();
+//     var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
+//     var top_of_screen = $(window).scrollTop();
+
+//     if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)){
+//         // the element is visible, do something
+//     } else {
+//         // the element is not visible, do something else
+//     }
+// });
+
+
+$.fn.isInViewport = function() {
+  var elementTop = $(this).offset().top;
+  var elementBottom = elementTop + $(this).outerHeight();
+
+  var viewportTop = $(window).scrollTop();
+  var viewportBottom = viewportTop + $(window).height();
+
+  return elementBottom > viewportTop && elementTop < viewportBottom;
+};
+
+$(window).on('resize scroll', function() {
+  $('.section').each(function() {
+      var activeColor = $(this).attr('id');
+    if ($(this).isInViewport()) {
+      $('#fixed-' + activeColor).addClass(activeColor + '-active');
+    } else {
+      $('#fixed-' + activeColor).removeClass(activeColor + '-active');
+    }
+  });
 });
-}
-$(document).ready(function () {
-$(document).on("scroll", onScroll);
-$("a[href^=#]").click(function(e){
-e.preventDefault();
-$(document).off("scroll");
-$(menu_selector + " a.active").removeClass("active");
-$(this).addClass("active");
-var hash = $(this).attr("href");
-var target = $(hash);
-$("html, body").animate({
-scrollTop: target.offset().top
-}, 500, function(){
-window.location.hash = hash;
-$(document).on("scroll", onScroll);
-});
-});
-});
+
+
+
+
+
+// var menu_selector = ".menu"; // Переменная должна содержать название класса или идентификатора, обертки нашего меню.
+// function onScroll(){
+// var scroll_top = $(document).scrollTop();
+// $(menu_selector + " a").each(function(){
+// var hash = $(this).attr("href");
+// var target = $(hash);
+// if (target.position().top <= scroll_top && target.position().top + target.outerHeight() > scroll_top) {
+// $(menu_selector + " a.active").removeClass("active");
+// $(this).addClass("active");
+// } else {
+// $(this).removeClass("active");
+// }
+// });
+// }
+// $(document).ready(function () {
+// $(document).on("scroll", onScroll);
+// $("a[href^=#]").click(function(e){
+// e.preventDefault();
+// $(document).off("scroll");
+// $(menu_selector + " a.active").removeClass("active");
+// $(this).addClass("active");
+// var hash = $(this).attr("href");
+// var target = $(hash);
+// $("html, body").animate({
+// scrollTop: target.offset().top
+// }, 500, function(){
+// window.location.hash = hash;
+// $(document).on("scroll", onScroll);
+// });
+// });
+// });
