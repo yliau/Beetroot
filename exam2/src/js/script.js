@@ -27,11 +27,6 @@ responsive: [
 	})
 
 
-const form = $('#contactForm');
-form.on('submit', (e) => {
-  e.preventDefault();
-});
-
 $('.up').on('click', () => {
       window.scrollTo({
         top: 0,
@@ -239,8 +234,7 @@ function initMap() {
     ]
   }
 ]
-        // Create a map object and specify the DOM element
-        // for display.
+
         const map = new google.maps.Map(document.getElementById('map'), {
           center: myLatLng,
           zoom: 15,
@@ -303,7 +297,7 @@ $.fn.isInViewport = function() {
   var viewportTop = $(window).scrollTop();
   var viewportBottom = viewportTop + $(window).height();
 
-  return elementBottom > viewportTop && elementTop < viewportBottom && (elementTop < (viewportTop + 100)) && !(elementBottom < (viewportTop + 100));
+  return elementBottom > viewportTop && elementTop < viewportBottom && (elementTop < (viewportTop + $(window).height() / 2)) && !(elementBottom < (viewportTop + $(window).height() / 2));
 };
 
 $(window).on('resize scroll', function() {
