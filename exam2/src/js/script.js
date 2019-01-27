@@ -259,7 +259,7 @@ const image = 'img/map-marker.png';
 
 $( () => {
  
-  //On Scroll Functionality
+
   $(window).scroll( () => {
     const windowTop = $(window).scrollTop();
     windowTop > 100 ? $('.up').removeClass('d-none') : $('.up').addClass('d-none');
@@ -268,14 +268,13 @@ $( () => {
   });
 
   
-  //Click Logo To Scroll To Top
-  $('.logo').on('click', () => {
+ $('.logo').on('click', () => {
     $('html,body').animate({
       scrollTop: 0
     },500);
   });
-  
-  //Toggle Menu
+
+
   $('#menu-toggle').on('click', () => {
     $('#menu-toggle').toggleClass('closeMenu');
     $('ul').toggleClass('showMenu');
@@ -318,25 +317,3 @@ $(window).on('resize scroll', function() {
   });
 });
 
-
-
-// $.fn.isInViewport = function() {
-//   var elementTop = $(this).offset().top;
-//   var elementBottom = elementTop + $(this).outerHeight();
-
-//   var viewportTop = $(window).scrollTop();
-//   var viewportBottom = viewportTop + $(window).height();
-
-//   return elementBottom > viewportTop && elementTop < viewportBottom && (elementBottom > 300);
-// };
-
-// $(window).on('resize scroll', function() {
-//   $('.section').each(function() {
-//       var activeSection = $(this).attr('id');
-//     if ($(this).isInViewport()) {
-//       $('#fixed-' + activeSection).addClass(activeSection + '-active');
-//     } else {
-//       $('#fixed-' + activeSection).removeClass(activeSection + '-active');
-//     }
-//   });
-// });

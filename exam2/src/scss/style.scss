@@ -36,33 +36,3 @@
 @import 'team';
 @import 'contact';
 @import 'footer';
-
-
-/////////////////////////// REMOVE BEFORE PRODACTION 
-
-
-
-// 
-// 
-// 
-
-@media all and (max-width: 319px)  {
-	*{
-		display: none!important;
-	}
-}
-
-header,
-.first-screen,
-.about,
-.team,
-.a456,
-.services,
-// .works,
-// .team,
-// .contact,
-.footer
-
- {
-	// display: none!important;
-}
